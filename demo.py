@@ -18,7 +18,7 @@ def demo_humor_detection():
     try:
         # Load the model
         print("📥 Loading humor detection model...")
-        classifier = pipeline("audio-classification", model="rishiA/humor_model_v4")
+        classifier = pipeline("audio-classification", model="rishiA/humor_model_v2")
         print("✅ Model loaded successfully!")
         
         # Check if we have any audio files in the current directory
@@ -33,7 +33,7 @@ def demo_humor_detection():
             print(f"\n🎵 Found audio files: {audio_files}")
             print("You can test the model with these files by running:")
             for file in audio_files:
-                print(f"  python -c \"from transformers import pipeline; c=pipeline('audio-classification', model='rishiA/humor_model_v4'); print(c('{file}'))\"")
+                print(f"  python -c \"from transformers import pipeline; c=pipeline('audio-classification', model='rishiA/humor_model_v2'); print(c('{file}'))\"")
         else:
             print("\n📁 No audio files found in current directory.")
             print("To test the model:")

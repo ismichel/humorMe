@@ -24,7 +24,7 @@ CORS(app)
 
 # Initialize the humor classification pipeline
 try:
-    classifier = pipeline("audio-classification", model="rishiA/humor_model_v4")
+    classifier = pipeline("audio-classification", model="rishiA/humor_model_v2")
     logger.info("Model loaded successfully")
 except Exception as e:
     logger.error(f"Failed to load model: {e}")
